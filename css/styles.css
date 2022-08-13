@@ -3,103 +3,31 @@
     padding: 0;
     letter-spacing: 1.1px;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
+    color: whitesmoke;
 }
 
-/* HEADER STARTS HERE */
-
-header {
-    height: 80px;
-    background: #343a40;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.header__title {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    margin-left: 10px;
-    color: #dc3545;
-}
-
-.header__menuToggle {
-    height: 40px;
-    width: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid whitesmoke;
-    border-radius: 2px;
-    margin-right: 10px;
-    z-index: 999;
-}
-
-.header__menuToggle__iconCenter {
-    height: 2px;
-    width: 50%;
-    background-color: whitesmoke;
-    position: relative;
-    display: flex;
-    justify-content: center;
-}
-
-.header__menuToggle__iconCenter::before {
-    content: '';
-    height: 2px;
-    width: 70%;
-    background-color: whitesmoke;
-    position: absolute;
-    top: -10px;
-}
-
-.header__menuToggle__iconCenter::after {
-    content: '';
-    height: 2px;
-    width: 70%;
-    background-color: whitesmoke;
-    position: absolute;
-    top: 10px;
-}
+/* ----- NAV STARTS HERE ----- */
 
 nav {
     width: 100%;
-    height: 0;
-    overflow: hidden;
-    background-color: #343a40;
-    position: absolute;
-    top: 0;
-    left: 0;
+    height: 80px;
+    background: #373F51;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
-nav>a {
-    font-size: 1rem;
-    text-decoration: none;
+.nav__logo-h1 {
+    font-style: italic;
+}
+
+.nav__links-a {
     font-weight: bold;
+    text-decoration: none;
+
+    padding: 5px 15px;
+    border-radius: 3px;
+    background-color: #008DD5;
 }
 
-@media screen and (min-width: 1224px) {
-    nav {
-        height: 100%;
-        width: auto;
-        position: static;
-        overflow: auto;
-        background-color: unset;
-        flex-direction: row;
-        transition: height 0.5s ease-in-out;
-    }
-
-    nav>a {
-        margin: 0 50px;
-    }
-
-    .header__menuToggle {
-        display: none;
-    }
-}
