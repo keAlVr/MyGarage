@@ -31,3 +31,45 @@ nav {
     background-color: #008DD5;
 }
 
+/* ----- HEADER STARTS HERE ----- */
+
+header {
+    width: 100%;
+    max-height: 500px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.header__h1 {
+    position: absolute;
+    padding: 5px 15px;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    left: 0.5rem;
+    top: 5.5rem;
+    border-radius: 3px;
+    background-color: #373F51;
+    opacity: 80%;
+}
+
+.header__h2 {
+    position: absolute;
+    padding: 2.5px 15px;
+    font-size: 1.1rem;
+    font-weight: bolder;
+    left: 0.5rem;
+    top: 8rem;
+    border-radius: 3px;
+    background-color: #373F51;
+    opacity: 80%;
+}
+
+.header__img {
+    width: 100%;
+    opacity: 80%;
+}
+
+
