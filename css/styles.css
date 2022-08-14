@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   letter-spacing: 1.1px;
-  line-height: 20px;
   box-sizing: border-box;
   font-family: Helvetica, Arial, sans-serif;
   color: #fafaff;
@@ -28,6 +27,9 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 10000;
 }
 
 .nav__logo-h1 {
@@ -49,81 +51,70 @@ nav {
 
 header {
   width: 100%;
-  max-height: 500px;
-  overflow: hidden;
+  height: 600px;
+  margin-top: 80px;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
   position: relative;
 }
 
-.header__h1 {
+header::before {
+  content: "";
+
+  background-image: url("../img/CarUnsplash-cropped.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  opacity: 85%;
+
   position: absolute;
-  padding: 0.5rem 15px;
-  font-size: 2.5rem;
-  font-weight: bolder;
-  left: 10%;
-  top: 20%;
-  border-radius: 3px;
-  background-color: var(--main-color);
-  opacity: 80%;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+.header__container {
+  width: 100%;
+  margin-bottom: 10rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.header__h1,
+.header__h2 {
+  padding: 0.5rem 1.5rem;
+  margin-left: 5rem;
+  margin-bottom: 1rem;
+
+  z-index: 1001;
+}
+
+.header__h1 {
+  font-size: 4rem;
 }
 
 .header__h2 {
-  position: absolute;
-  padding: 2.5px 15px;
-  font-size: 1.25rem;
-  font-weight: bolder;
-  left: 10%;
-  top: 35%;
-  border-radius: 3px;
-  background-color: var(--main-color);
-  opacity: 80%;
+  font-size: 2rem;
 }
 
-.header__img {
-  width: 100%;
-  opacity: 80%;
-}
-
-@media screen and (min-width: 350px) {
-  .header__h1 {
-    font-size: 1.2rem;
-  }
-
-  .header__h2 {
-    font-size: 0.6rem;
-  }
-}
-
-@media screen and (min-width: 400px) {
-  .header__h1 {
-    font-size: 1.5rem;
-    padding: 0.8rem 15px;
-  }
-
-  .header__h2 {
-    font-size: 0.75rem;
-  }
-}
-
-@media screen and (min-width: 550px) {
-  .header__h1 {
-    font-size: 2.2rem;
-  }
-
-  .header__h2 {
-    font-size: 1.1rem;
-  }
-}
-
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 650px) {
   .header__h1 {
     font-size: 3rem;
   }
 
   .header__h2 {
     font-size: 1.5rem;
+  }
+
+  .header__h1,
+  .header__h2 {
+    margin-left: 1.5rem;
   }
 }
 
@@ -165,6 +156,7 @@ header {
   max-height: 40%;
   object-fit: cover;
   border-bottom: 2px solid var(--main-color);
+  opacity: 85%;
 }
 
 .OurServices__container-cards__infos__title {
@@ -186,6 +178,7 @@ p {
 .OurServices__container-cards__infos__paragraph {
   font-style: italic;
   font-size: 0.8rem;
+  line-height: 20px;
   opacity: 80%;
   color: var(--main-color);
 }
