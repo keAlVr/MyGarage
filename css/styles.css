@@ -283,3 +283,71 @@ p {
   margin-bottom: 1rem;
   text-align: center;
 }
+
+/* ----- SECTION CONTACT STARTS HERE ----- */
+
+.Contact {
+  width: 100%;
+  height: auto;
+}
+
+.Contact__h2 {
+  font-weight: bold;
+  text-align: center;
+  padding: 1.5rem 15px;
+}
+
+.Contact__locate {
+  width: 100%;
+  height: auto;
+}
+
+.Contact__container {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Contact__infos {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  grid-template-areas:
+    "adress adress"
+    "tel mail";
+}
+
+.Contact__infos-adress {
+  width: auto;
+  height: 100px;
+}
+
+.Contact__infos-tel,
+.Contact__infos-mail {
+  width: auto;
+  height: 100px;
+}
+
+.Contact__infos-adress {
+  background-color: red;
+  grid-area: adress;
+}
+
+.Contact__infos-tel {
+  grid-area: tel;
+  background-color: green;
+}
+
+.Contact__infos-mail {
+  grid-area: mail;
+  background-color: blue;
+}
