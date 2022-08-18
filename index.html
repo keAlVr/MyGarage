@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
 
-  <body>
+  <body id="#home">
     <nav>
       <div class="nav__logo">
         <h1 class="nav__logo-h1">MonGarage</h1>
@@ -33,7 +33,7 @@
       </div>
     </header>
 
-    <section class="OurServices">
+    <section class="OurServices" id="#services">
       <h2 class="OurServices__h2">Nos services</h2>
 
       <div class="OurServices__container">
@@ -158,7 +158,7 @@
       </div>
     </section>
 
-    <section class="OurEngagements">
+    <section class="OurEngagements" id="#engagements">
       <h2 class="OurEngagements__h2">Nos engagements</h2>
       <div class="OurEngagements__container">
         <div class="OurEngagements__cards">
@@ -203,26 +203,51 @@
       </div>
     </section>
 
-    <section class="Contact">
-      <h2 class="Contact__h2">
-        Contactez-nous
-      </h2>
+    <section class="Contact" id="#contact">
+      <h2 class="Contact__h2">Contactez-nous</h2>
       <div class="Contact__container">
         <div class="Contact__locate">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11548.593816763352!2d1.3870491!3d43.6450796!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3532a81674a68489!2sBlagnac%20Garage!5e0!3m2!1sfr!2sfr!4v1660679020853!5m2!1sfr!2sfr" width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11548.593816763352!2d1.3870491!3d43.6450796!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3532a81674a68489!2sBlagnac%20Garage!5e0!3m2!1sfr!2sfr!4v1660679020853!5m2!1sfr!2sfr"
+            width="100%"
+            height="500px"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
         <div class="Contact__infos">
           <div class="Contact__infos-adress">
-            
+            <div class="Contact__infos-p">Adresse :</div>
+            <div class="Contact__infos-p">
+              95 Vieux Chemin de Grenade <br />
+              31700 Blagnac
+            </div>
           </div>
           <div class="Contact__infos-tel">
-
+            <div class="Contact__infos-p">Téléphone :</div>
+            <a href="tel:+0757xxxxxx">07 57 XX XX XX</a>
           </div>
-          <div class="Contact__infos-mail"
-          ></div>
+          <div class="Contact__infos-mail">
+            <div class="Contact__infos-p">E-mail :</div>
+            <a href="mailto:Blagnacgarage01@gmail.com"
+              >MonGarage@gmail.com</a
+            >
+          </div>
         </div>
       </div>
     </section>
+
+    <footer>
+      <div class="footer__social">
+        <a href="facebook"><img src="./img/facebook.png" alt="facebook logo"></a>
+        <a href="facebook"><img src="./img/instagram.png" alt="instagram logo"></a>
+      </div>
+      <p class="footer__copyright">
+        Copyright @ MonGarage - 2022
+      </p>
+    </footer>
 
     <script src="./js/main.js"></script>
   </body>

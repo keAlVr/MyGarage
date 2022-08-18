@@ -179,8 +179,9 @@ header::before {
   font-weight: bold;
 }
 
-.OurServices__container-cards__infos > span,
-p {
+.OurServices__container-cards__infos,
+.OurServices__container-cards__infos span,
+.OurServices__container-cards__infos p {
   display: block;
   margin: 10px 15px;
 }
@@ -255,7 +256,7 @@ p {
 .OurEngagements__container {
   display: flex;
   flex-wrap: wrap;
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -313,41 +314,76 @@ p {
 }
 
 .Contact__infos {
-  width: 100%;
+  width: 95%;
   height: auto;
-  margin-bottom: 1.5rem;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  grid-template-areas:
-    "adress adress"
-    "tel mail";
+  margin: 0.5rem 0 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
-.Contact__infos-adress {
-  width: auto;
-  height: 100px;
+.Contact__infos-adress,
+.Contact__infos-mail,
+.Contact__infos-tel {
+  border: 1px solid var(--border-light-color);
+  background-color: var(--white-background);
+  box-shadow: 5px 5px var(--section-color);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
+.Contact__infos-adress,
 .Contact__infos-tel,
 .Contact__infos-mail {
-  width: auto;
+  width: 100%;
   height: 100px;
 }
 
-.Contact__infos-adress {
-  background-color: red;
-  grid-area: adress;
+.Contact__infos-p,
+.Contact__infos a {
+  padding: 0.2rem 0 0.2rem 1rem;
 }
 
-.Contact__infos-tel {
-  grid-area: tel;
-  background-color: green;
+.Contact__infos-p:nth-child(1) {
+  font-weight: bold;
 }
 
-.Contact__infos-mail {
-  grid-area: mail;
-  background-color: blue;
+@media screen and (min-width: 768px) {
+  .Contact__infos {
+    flex-direction: row;
+  }
+
+  .Contact__infos-adress,
+  .Contact__infos-tel,
+  .Contact__infos-mail {
+    width: 1/3;
+  }
+}
+
+/* ----- FOOTER STARTS HERE ----- */
+
+footer {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 0.8rem;
+
+  background-color: var(--section-color);
+}
+
+.footer__social img {
+  width: 25px;
+  height: auto;
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+.footer__copyright {
+  margin-bottom: 1rem;
+  font-weight: bold;
 }
